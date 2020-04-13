@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
+import Home from '../components/Home';
 
-const Home = () => (
+const Index = () => (
   <div>
     <Head>
       <title>Create Next App</title>
@@ -19,9 +20,15 @@ const Home = () => (
 
     <main>
       <Navbar />
+      <br />
+      <Home />
     </main>
 
-    <style jsx>{``}</style>
+    <style jsx>{`
+      main {
+        height: 100vh;
+      }
+    `}</style>
 
     <style jsx global>{`
       html,
@@ -39,4 +46,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default Index;

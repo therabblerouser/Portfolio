@@ -20,7 +20,7 @@ class Navbar extends Component {
           <nav>
             <div className="container">
               <div className="nav-wrapper">
-                <a href="#" className="brand-logo">
+                <a href="/" className="brand-logo">
                   Joe McCann
                 </a>
                 <a
@@ -54,7 +54,7 @@ class Navbar extends Component {
 
         <style jsx>{`
           .container {
-            width: 80%;
+            width: 95%;
           }
 
           .navbar-fixed {
