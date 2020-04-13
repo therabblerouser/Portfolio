@@ -3,16 +3,17 @@ import React from 'react';
 const Home = () => {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col l6 m8 s12">
+      <div className="group">
+        <div className="profilePic">
           <img src="/helloquence-5fNmWej4tAA-unsplash.jpg" alt="" />
         </div>
-        <div className="col l6 m4 s12">
-          <div className="row" style={{ marginLeft: '0.2rem' }}>
-            <h4>Hi, I'm Joe McCann, you next Fullstack Web Developer</h4>
+        <div className="programmerDescription">
+          <div>
+            <h2>Fullstack Web Developer</h2>
+            <h5>REACT | NEXT.JS | NODE.JS</h5>
             <div>
-              Contact Me{' '}
-              <a href="mailto:mccannjoe42@gmail.com">mccannjoe42@gmail.com</a>.
+              Contact me:{' '}
+              <a href="mailto:mccannjoe42@gmail.com">mccannjoe42@gmail.com</a>
             </div>
           </div>
         </div>
@@ -24,32 +25,43 @@ const Home = () => {
             width: 95%;
           }
 
-          .row .col {
-            padding: 0;
-          }
-
           img {
-            height: 100%;
-            width: 100%;
+            height: 125%;
+            width: 96%;
           }
 
-          h4 {
-            margin-top: 8rem;
+          h2 {
+            font-size: 3.2rem;
+          }
+
+          .group {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          .profilePic {
+            width: 60%;
+          }
+
+          .programmerDescription {
+            margin-top: 10rem;
           }
 
           @media (max-width: 576px) {
+            .group {
+              display: block;
+            }
             img {
               height: 100%;
               width: 100%;
             }
 
-            h4 {
-              margin-top: 2rem;
+            .profilePic {
+              width: 100%;
             }
 
-            .row .col {
-              display: flex;
-              justify-content: center;
+            .programmerDescription {
+              margin-top: 0rem;
             }
           }
         `}
