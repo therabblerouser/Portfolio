@@ -30,7 +30,7 @@ class Navbar extends Component {
                 >
                   <i className="material-icons">menu</i>
                 </a>
-                <ul className="right hide-on-lg-and-down">
+                <ul className="right sectionNavs">
                   <li>
                     <a href="#">About</a>
                   </li>
@@ -76,10 +76,11 @@ class Navbar extends Component {
           }
 
           @media only screen and (max-width: 992px) {
-            nav .brand-logo {
-              left: 0%;
-              -webkit-transform: translateX(-0%);
-              transform: translateX(-0%);
+            nav {
+              background: #191607;
+            }
+            .brand-logo {
+              color: #fff;
             }
           }
 
@@ -87,14 +88,12 @@ class Navbar extends Component {
             nav {
               background: #191607;
             }
-
-            nav .brand-logo {
-              -webkit-transform: translateX(50%);
-              transform: translateX(50%);
-            }
-
             .brand-logo {
               color: #fff;
+            }
+
+            .sectionNavs {
+              display: none;
             }
           }
         `}</style>
