@@ -13,7 +13,9 @@ const Home = () => {
                 and i'm your new{' '}
                 <span>
                   <ReactRotatingText
-                    pause={3000}
+                    typingInterval={140}
+                    deletingInterval={140}
+                    pause={2000}
                     color="#82ADC9"
                     items={['react', 'next', 'node']}
                   />

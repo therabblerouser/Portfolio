@@ -15,7 +15,9 @@ const Navbar = () => {
                 <a href="/projects">Projects</a>
               </li>
               <li>
-                <i className="material-icons">brightness_high</i>
+                <button>
+                  <i className="material-icons">brightness_high</i>
+                </button>
               </li>
             </ul>
           </div>
@@ -41,32 +43,35 @@ const Navbar = () => {
           font-weight: 300;
         }
 
+        ul li button {
+          height: 100%;
+        }
+
+        ul li button i {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         ul li a {
+          background-color: transparent;
           color: #fff;
           font-size: 14.4px;
         }
 
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+        }
+
         .material-icons {
           font-size: 1.3rem;
-          margin-top: 4px;
-          margin-left: 10px;
           color: #fff;
         }
 
-        @media (max-width: 576px) {
-          nav {
-            background-color: #202020;
-          }
-          .title {
-            font-size: 20px;
-          }
-
+        @media (min-width: 576px) {
           .material-icons {
-            margin-top: 0;
-          }
-
-          ul li a {
-            font-size: 14.4px;
           }
         }
       `}</style>
