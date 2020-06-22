@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactRotatingText from 'react-rotating-text';
 
 const Home = () => {
   return (
@@ -8,7 +9,16 @@ const Home = () => {
           <div className="hero-text">
             <h1>Hi, I'm Joe</h1>
             <div className="sliding-text">
-              <p>and i'm your next react dev</p>
+              <p>
+                and i'm your new{' '}
+                <span>
+                  <ReactRotatingText
+                    pause={3000}
+                    items={['react', 'next', 'node']}
+                  />
+                </span>
+                .js dev
+              </p>
             </div>
           </div>
         </div>
@@ -53,6 +63,23 @@ const Home = () => {
             font-weight: 200;
             margin: 0;
             color: #fff;
+          }
+
+          .react-rotating-text-cursor {
+            animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99)
+              0s infinite;
+          }
+
+          @keyframes blinking-cursor {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
           }
 
           @media (max-width: 576px) {
