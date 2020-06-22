@@ -38,6 +38,7 @@ const Navbar = () => {
         .title {
           color: #fff;
           font-size: 20px;
+          font-weight: 300;
         }
 
         ul li a {

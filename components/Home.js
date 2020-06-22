@@ -14,10 +14,11 @@ const Home = () => {
                 <span>
                   <ReactRotatingText
                     pause={3000}
+                    color="#82ADC9"
                     items={['react', 'next', 'node']}
                   />
                 </span>
-                .js dev
+                .js developer
               </p>
             </div>
           </div>
@@ -35,7 +36,8 @@ const Home = () => {
             justify-content: center;
             align-items: center;
             position: relative;
-            height: 390px;
+            margin-top: 16rem;
+            height: calc((2px * 100) - 55px);
           }
 
           .container {
@@ -51,14 +53,14 @@ const Home = () => {
           }
 
           .hero-text h1 {
-            font-size: min(max(2.2rem, 6vw), 5rem);
+            font-size: 80px;
             font-weight: 600;
             margin: 0;
             color: #fff;
           }
 
           .sliding-text p {
-            font-size: min(max(0.9rem, 4vw), 2.3rem);
+            font-size: 33px;
             font-family: 'Inconsolata', monospace;
             font-weight: 200;
             margin: 0;
@@ -82,9 +84,34 @@ const Home = () => {
             }
           }
 
+          @media (max-width: 1024px) {
+            .home-page-hero {
+              margin-top: 23rem;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .home-page-hero {
+              margin-top: 21rem;
+            }
+
+            .hero-text {
+              padding-left: 3rem;
+              padding-right: 3rem;
+            }
+
+            .hero-text h1 {
+              font-size: 60px;
+            }
+
+            .sliding-text p {
+              font-size: 28px;
+            }
+          }
+
           @media (max-width: 576px) {
             .home-page-hero {
-              height: 500px;
+              margin-top: 20rem;
             }
 
             .hero-text {
@@ -97,7 +124,8 @@ const Home = () => {
             }
 
             .sliding-text p {
-              font-size: 25px;
+              font-size: 15.5px;
+              font-weight: 300;
               margin: 0 0 4px;
             }
           }

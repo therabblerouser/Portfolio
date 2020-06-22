@@ -5,14 +5,15 @@ import Home from '../components/Home';
 const Index = () => (
   <div>
     <Head>
-      <title>Create Next App</title>
+      <title>Joe McCann</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.ico" />
       <link
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;800&display=swap"
         rel="stylesheet"
       ></link>
       <link
@@ -24,7 +25,6 @@ const Index = () => (
 
     <main>
       <Navbar />
-      <br />
       <Home />
     </main>
 
