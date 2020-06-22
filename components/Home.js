@@ -2,18 +2,13 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="group">
-        <div className="profilePic">
-          <img src="/helloquence-5fNmWej4tAA-unsplash.jpg" alt="" />
-        </div>
-        <div className="programmerDescription">
-          <div>
-            <h2>Fullstack Web Developer</h2>
-            <h5>REACT | NEXT.JS | NODE.JS</h5>
-            <div>
-              Contact me:{' '}
-              <a href="mailto:mccannjoe42@gmail.com">mccannjoe42@gmail.com</a>
+    <div className="home-page-main">
+      <div className="home-page-hero">
+        <div className="container">
+          <div className="hero-text">
+            <h1>Hi, I'm Joe</h1>
+            <div className="sliding-text">
+              <p>and i'm your next react dev</p>
             </div>
           </div>
         </div>
@@ -21,47 +16,62 @@ const Home = () => {
 
       <style jsx>
         {`
-          .container {
-            width: 95%;
+          .home-page-main {
+            margin-top: 55px;
           }
 
-          img {
-            height: 125%;
-            width: 96%;
-          }
-
-          h2 {
-            font-size: 3.2rem;
-          }
-
-          .group {
+          .home-page-hero {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 390px;
           }
 
-          .profilePic {
-            width: 60%;
+          .container {
+            padding: 0 1.4em;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
           }
 
-          .programmerDescription {
-            margin-top: 10rem;
+          .hero-text {
+            padding-left: 2rem;
+            padding-right: 2rem;
+          }
+
+          .hero-text h1 {
+            font-size: min(max(2.2rem, 6vw), 5rem);
+            font-weight: 600;
+            margin: 0;
+            color: #fff;
+          }
+
+          .sliding-text p {
+            font-size: min(max(0.9rem, 4vw), 2.3rem);
+            font-family: 'Inconsolata', monospace;
+            font-weight: 200;
+            margin: 0;
+            color: #fff;
           }
 
           @media (max-width: 576px) {
-            .group {
-              display: block;
-            }
-            img {
-              height: 100%;
-              width: 100%;
+            .home-page-hero {
+              height: 500px;
             }
 
-            .profilePic {
-              width: 100%;
+            .hero-text {
+              padding-left: 2rem;
+              padding-right: 2rem;
+            }
+            .hero-text h1 {
+              font-size: 40px;
+              margin: 0;
             }
 
-            .programmerDescription {
-              margin-top: 0rem;
+            .sliding-text p {
+              font-size: 25px;
+              margin: 0 0 4px;
             }
           }
         `}

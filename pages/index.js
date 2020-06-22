@@ -12,6 +12,10 @@ const Index = () => (
         rel="stylesheet"
       />
       <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400;800&display=swap"
+        rel="stylesheet"
+      ></link>
+      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       />
@@ -37,6 +41,8 @@ const Index = () => (
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
           Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        background-color: #202020;
+        line-height: 1.15;
       }
 
       * {

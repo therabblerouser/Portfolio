@@ -1,105 +1,90 @@
-import React, { Component } from 'react';
-import $ from 'jquery';
-
-if (typeof window !== 'undefined') {
-  window.$ = $;
-  window.jQuery = $;
-  require('materialize-css');
-}
-
-class Navbar extends Component {
-  componentDidMount = () => {
-    $(document).ready(function() {
-      $('.sidenav').sidenav();
-    });
-  };
-  render() {
-    return (
-      <div>
-        <div className="navbar-fixed">
-          <nav>
-            <div className="container">
-              <div className="nav-wrapper">
-                <a href="/" className="brand-logo">
-                  Joe McCann
-                </a>
-                <a
-                  href="#"
-                  data-target="mobile"
-                  className="right sidenav-trigger"
-                >
-                  <i className="material-icons">menu</i>
-                </a>
-                <ul className="right sectionNavs">
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">Projects</a>
-                  </li>
-                </ul>
-              </div>
-
-              <ul className="sidenav" id="mobile">
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Projects</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+const Navbar = () => {
+  return (
+    <div>
+      <nav>
+        <div className="container">
+          <div>
+            <a href="/" className="title">
+              joemccann.dev
+            </a>
+            <ul className="right sectionNavs">
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="/projects">Projects</a>
+              </li>
+              <li>
+                <i className="material-icons">brightness_high</i>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
 
-        <style jsx>{`
-          .container {
-            width: 95%;
-          }
+      <style jsx>{`
+        .container {
+          width: 100%;
+          max-width: 700px;
+          margin: 0 auto;
+          padding: 0 1.4em;
+        }
 
-          .navbar-fixed {
-            z-index: 999;
-          }
+        nav {
+          background-color: #202020;
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+        }
 
+        .title {
+          color: #fff;
+          font-size: 20px;
+        }
+
+        ul li a {
+          color: #fff;
+          font-size: 14.4px;
+        }
+
+        .material-icons {
+          font-size: 1.3rem;
+          margin-top: 4px;
+          margin-left: 10px;
+          color: #fff;
+        }
+
+        @media (max-width: 576px) {
           nav {
-            background: #fff;
-            box-shadow: none;
+            background-color: #202020;
+          }
+          .title {
+            font-size: 20px;
           }
 
-          .brand-logo {
-            color: #191607;
+          .material-icons {
+            margin-top: 0;
           }
 
           ul li a {
-            color: #191607;
-            font-size: 1.25rem;
+            font-size: 14.4px;
           }
-
-          @media only screen and (max-width: 992px) {
-            nav {
-              background: #191607;
-            }
-            .brand-logo {
-              color: #fff;
-            }
-          }
-
-          @media (max-width: 576px) {
-            nav {
-              background: #191607;
-            }
-            .brand-logo {
-              color: #fff;
-            }
-
-            .sectionNavs {
-              display: none;
-            }
-          }
-        `}</style>
-      </div>
-    );
-  }
-}
+        }
+      `}</style>
+    </div>
+  );
+};
 
 export default Navbar;
+
+// body.dark {
+//   --bg-color: #202020;
+//   --font-color-body: #fff;
+//   --tag-bg: #131313;
+//   --tag-color: #f2f2f2;
+//   --contact-bg: #1c1c1c;
+//   --contact-color: #fff;
+//   --form-bg: #131313;
+//   --form-button-bg: #0e0e0e;
+//   --form-button-color: var(--font-color-accent);
+//   --hr-bg: #fff;
+//   --blockquote-color: hsla(0,0%,100%,0.8);
+// }
