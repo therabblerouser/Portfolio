@@ -3,28 +3,26 @@ const Navbar = () => {
     <div>
       <nav>
         <div className="container">
-          <div>
+          <div className="navbar-alignment">
             <a href="/" className="title">
               joemccann.dev
             </a>
-            <ul className="right sectionNavs">
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="/projects">Projects</a>
-              </li>
-              <li>
-                <button>
-                  <i className="material-icons">brightness_high</i>
-                </button>
-              </li>
-            </ul>
+            <div className="section-navs">
+              <a href="#">About</a>
+              <a href="/projects">Projects</a>
+              <button>
+                <i className="material-icons">brightness_high</i>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
 
       <style jsx>{`
+        nav {
+          background-color: #202020;
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+        }
         .container {
           width: 100%;
           max-width: 700px;
@@ -32,9 +30,18 @@ const Navbar = () => {
           padding: 0 1.4em;
         }
 
-        nav {
-          background-color: #202020;
-          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+        .navbar-alignment {
+          display: flex;
+          height: 55px;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 0.5em;
+        }
+
+        .section-navs {
+          display: flex;
+          align-items: center;
         }
 
         .title {
@@ -43,36 +50,23 @@ const Navbar = () => {
           font-weight: 300;
         }
 
-        ul li button {
-          height: 100%;
-        }
-
-        ul li button i {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        ul li a {
+        a {
           background-color: transparent;
           color: #fff;
           font-size: 14.4px;
+          margin-left: 10px;
         }
 
         button {
           background-color: transparent;
           border: none;
           cursor: pointer;
+          margin-left: 10px;
         }
 
         .material-icons {
           font-size: 1.3rem;
           color: #fff;
-        }
-
-        @media (min-width: 576px) {
-          .material-icons {
-          }
         }
       `}</style>
     </div>
