@@ -12,7 +12,7 @@ const Navbar = ({ darkMode, toggleMode }) => {
               <a href="/projects">Projects</a>
               <button onClick={toggleMode}>
                 <i className="material-icons">
-                  {!darkMode ? 'brightness_high' : 'brightness_2'}
+                  {!darkMode ? 'brightness_2' : 'brightness_high'}
                 </i>
               </button>
             </div>
@@ -47,14 +47,14 @@ const Navbar = ({ darkMode, toggleMode }) => {
         }
 
         .title {
-          color: ${!darkMode ? '#fff' : '#202020'};
+          color: var(--font-color);
           font-size: 20px;
           font-weight: 300;
         }
 
         a {
           background-color: transparent;
-          color: ${!darkMode ? '#fff' : '#202020'};
+          color: var(--font-color);
           font-size: 14.4px;
           margin-left: 10px;
         }
@@ -63,12 +63,17 @@ const Navbar = ({ darkMode, toggleMode }) => {
           background-color: transparent;
           border: none;
           cursor: pointer;
-          margin-left: 10px;
+          margin-left: 6px;
+        }
+
+        button:focus {
+          outline: none;
+          box-shadow: none;
         }
 
         .material-icons {
           font-size: 1.3rem;
-          color: ${!darkMode ? '#fff' : '#202020'};
+          color: var(--font-color);
         }
       `}</style>
     </div>
@@ -76,17 +81,3 @@ const Navbar = ({ darkMode, toggleMode }) => {
 };
 
 export default Navbar;
-
-// body.dark {
-//   --bg-color: #202020;
-//   --font-color-body: #fff;
-//   --tag-bg: #131313;
-//   --tag-color: #f2f2f2;
-//   --contact-bg: #1c1c1c;
-//   --contact-color: #fff;
-//   --form-bg: #131313;
-//   --form-button-bg: #0e0e0e;
-//   --form-button-color: var(--font-color-accent);
-//   --hr-bg: #fff;
-//   --blockquote-color: hsla(0,0%,100%,0.8);
-// }

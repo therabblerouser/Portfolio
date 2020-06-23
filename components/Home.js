@@ -58,7 +58,7 @@ const Home = ({ darkMode }) => {
             font-size: 80px;
             font-weight: 600;
             margin: 0;
-            color: ${!darkMode ? '#fff' : '#202020'};
+            color: var(--font-color);
           }
 
           .sliding-text p {
@@ -66,7 +66,7 @@ const Home = ({ darkMode }) => {
             font-family: 'Inconsolata', monospace;
             font-weight: 200;
             margin: 0;
-            color: ${!darkMode ? '#fff' : '#202020'};
+            color: var(--font-color);
           }
 
           .react-rotating-text-cursor {
