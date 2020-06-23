@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
 
-const Home = () => {
+const Home = ({ darkMode }) => {
   return (
     <div className="home-page-main">
       <div className="home-page-hero">
@@ -58,7 +58,7 @@ const Home = () => {
             font-size: 80px;
             font-weight: 600;
             margin: 0;
-            color: #fff;
+            color: ${!darkMode ? '#fff' : '#202020'};
           }
 
           .sliding-text p {
@@ -66,7 +66,7 @@ const Home = () => {
             font-family: 'Inconsolata', monospace;
             font-weight: 200;
             margin: 0;
-            color: #fff;
+            color: ${!darkMode ? '#fff' : '#202020'};
           }
 
           .react-rotating-text-cursor {

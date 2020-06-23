@@ -1,4 +1,4 @@
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleMode }) => {
   return (
     <div>
       <nav>
@@ -10,8 +10,10 @@ const Navbar = () => {
             <div className="section-navs">
               <a href="#">About</a>
               <a href="/projects">Projects</a>
-              <button>
-                <i className="material-icons">brightness_high</i>
+              <button onClick={toggleMode}>
+                <i className="material-icons">
+                  {!darkMode ? 'brightness_high' : 'brightness_2'}
+                </i>
               </button>
             </div>
           </div>
@@ -20,7 +22,7 @@ const Navbar = () => {
 
       <style jsx>{`
         nav {
-          background-color: #202020;
+          background-color: var(--bg-color);
           box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
         }
         .container {
@@ -45,14 +47,14 @@ const Navbar = () => {
         }
 
         .title {
-          color: #fff;
+          color: ${!darkMode ? '#fff' : '#202020'};
           font-size: 20px;
           font-weight: 300;
         }
 
         a {
           background-color: transparent;
-          color: #fff;
+          color: ${!darkMode ? '#fff' : '#202020'};
           font-size: 14.4px;
           margin-left: 10px;
         }
@@ -66,7 +68,7 @@ const Navbar = () => {
 
         .material-icons {
           font-size: 1.3rem;
-          color: #fff;
+          color: ${!darkMode ? '#fff' : '#202020'};
         }
       `}</style>
     </div>
