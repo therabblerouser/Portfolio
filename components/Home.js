@@ -27,6 +27,7 @@ const Home = ({ darkMode }) => {
         </div>
       </div>
 
+      <i className="material-icons">expand_more</i>
       <style jsx>
         {`
           .home-page-main {
