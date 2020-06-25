@@ -25,11 +25,23 @@ const Home = ({ darkMode }) => {
             </div>
           </div>
         </div>
+        <div className="expand-icon">
+          <i className="material-icons">expand_more</i>
+        </div>
       </div>
 
-      <i className="material-icons">expand_more</i>
       <style jsx>
         {`
+          .expand-icon {
+            position: absolute;
+            top: 25rem;
+          }
+
+          .expand-icon i {
+            color: var(--accent-color);
+            font-size: 40px;
+          }
+
           .home-page-main {
             margin-top: 55px;
           }

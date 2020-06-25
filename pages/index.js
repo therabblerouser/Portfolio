@@ -64,6 +64,7 @@ const Index = () => {
         :root {
           --bg-color: ${!darkMode ? '#fff' : '#202020'};
           --font-color: ${!darkMode ? '#202020' : '#fff'};
+          --accent-color: #82adc9;
         }
 
         * {
