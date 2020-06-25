@@ -1,6 +1,6 @@
 const Navbar = ({ darkMode, toggleMode }) => {
   return (
-    <div>
+    <>
       <nav>
         <div className="container">
           <div className="navbar-alignment">
@@ -76,7 +76,7 @@ const Navbar = ({ darkMode, toggleMode }) => {
           color: var(--font-color);
         }
       `}</style>
-    </div>
+    </>
   );
 };
 

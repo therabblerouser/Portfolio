@@ -3,56 +3,52 @@ import ReactRotatingText from 'react-rotating-text';
 
 const Home = ({ darkMode }) => {
   return (
-    <div className="home-page-main">
-      <div className="home-page-hero">
-        <div className="container">
-          <div className="hero-text">
-            <h1>Hi, I'm Joe</h1>
-            <div className="sliding-text">
-              <p>
-                and i'm your new{' '}
-                <span>
-                  <ReactRotatingText
-                    typingInterval={140}
-                    deletingInterval={140}
-                    pause={2000}
-                    color="#82ADC9"
-                    items={['react', 'next', 'node']}
-                  />
-                </span>
-                .js developer
-              </p>
+    <>
+      <div className="home-page-main">
+        <div className="home-page-hero">
+          <div className="container">
+            <div className="hero-text">
+              <h1>Hi, I'm Joe</h1>
+              <div className="sliding-text">
+                <p>
+                  and i'm your new{' '}
+                  <span>
+                    <ReactRotatingText
+                      typingInterval={140}
+                      deletingInterval={140}
+                      pause={2000}
+                      color="#82ADC9"
+                      items={['react', 'next', 'node']}
+                    />
+                  </span>
+                  .js developer
+                </p>
+              </div>
             </div>
           </div>
+          <div className="expand-icon">
+            <i className="material-icons">expand_more</i>
+          </div>
         </div>
-        <div className="expand-icon">
-          <i className="material-icons">expand_more</i>
-        </div>
+        <section className="container aboutMeSection">
+          <h2>About Me</h2>
+        </section>
       </div>
 
       <style jsx>
         {`
-          .expand-icon {
-            position: absolute;
-            top: 25rem;
-          }
-
-          .expand-icon i {
-            color: var(--accent-color);
-            font-size: 40px;
-          }
-
           .home-page-main {
             margin-top: 55px;
           }
+
+          // ***** Hero Section *****
 
           .home-page-hero {
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
-            margin-top: 16rem;
-            height: calc((2px * 100) - 55px);
+            height: calc((6.7px * 100) - 55px);
           }
 
           .container {
@@ -63,8 +59,7 @@ const Home = ({ darkMode }) => {
           }
 
           .hero-text {
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 4rem;
           }
 
           .hero-text h1 {
@@ -87,6 +82,27 @@ const Home = ({ darkMode }) => {
               0s infinite;
           }
 
+          .expand-icon {
+            position: absolute;
+            bottom: 20px;
+          }
+
+          .expand-icon i {
+            color: var(--accent-color);
+            font-size: 40px;
+          }
+
+          // ***** About Section *****
+
+          section.aboutMeSection {
+            padding-top: 1.8em;
+            padding-bottom: 1.8em;
+          }
+
+          section.aboutMeSection h2 {
+            color: var(--font-color);
+          }
+
           @keyframes blinking-cursor {
             0% {
               opacity: 0;
@@ -101,18 +117,17 @@ const Home = ({ darkMode }) => {
 
           @media (max-width: 1024px) {
             .home-page-hero {
-              margin-top: 23rem;
+              height: calc((12.5px * 100) - 55px);
             }
           }
 
           @media (max-width: 768px) {
             .home-page-hero {
-              margin-top: 21rem;
+              height: calc((9px * 100) - 55px);
             }
 
             .hero-text {
-              padding-left: 3rem;
-              padding-right: 3rem;
+              padding-left: 4rem;
             }
 
             .hero-text h1 {
@@ -126,16 +141,15 @@ const Home = ({ darkMode }) => {
 
           @media (max-width: 576px) {
             .home-page-hero {
-              margin-top: 20rem;
+              height: calc((7px * 100) - 55px);
             }
 
             .hero-text {
-              padding-left: 2rem;
-              padding-right: 2rem;
+              padding-left: 3rem;
             }
+
             .hero-text h1 {
               font-size: 40px;
-              margin: 0;
             }
 
             .sliding-text p {
@@ -144,9 +158,15 @@ const Home = ({ darkMode }) => {
               margin: 0 0 4px;
             }
           }
+
+          @media (max-width: 375px) {
+            .home-page-hero {
+              height: calc((7px * 100) - 55px);
+            }
+          }
         `}
       </style>
-    </div>
+    </>
   );
 };
 
