@@ -65,6 +65,7 @@ const Index = () => {
           --bg-color: ${!darkMode ? '#fff' : '#202020'};
           --font-color: ${!darkMode ? '#202020' : '#fff'};
           --accent-color: #82adc9;
+          --contact-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
         }
 
         * {

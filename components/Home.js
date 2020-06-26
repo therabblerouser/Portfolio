@@ -30,8 +30,37 @@ const Home = ({ darkMode }) => {
             <i className="material-icons">expand_more</i>
           </div>
         </div>
-        <section className="container aboutMeSection">
+        <section className="contact">
+          <div className="container">
+            <h2>Contact Me</h2>
+            <p id="email-me">Email me, I'd love to work with you</p>
+            <div className="contact-img-email">
+              <img src="toa-heftiba-ImqbTNUoTD0-unsplash.jpg" alt="Joe" />
+            </div>
+          </div>
+        </section>
+        <section className="about-me container">
           <h2>About Me</h2>
+          <div className="inner-about-me">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              ex aliquam tempore explicabo cum perferendis officia molestiae
+              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
+              nostrum obcaecati a!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              ex aliquam tempore explicabo cum perferendis officia molestiae
+              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
+              nostrum obcaecati a!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+              ex aliquam tempore explicabo cum perferendis officia molestiae
+              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
+              nostrum obcaecati a!
+            </p>
+          </div>
         </section>
       </div>
 
@@ -48,7 +77,7 @@ const Home = ({ darkMode }) => {
             justify-content: center;
             align-items: center;
             position: relative;
-            height: calc((6.7px * 100) - 55px);
+            height: calc((max(7.5px, 1vh) * 100) - 55px);
           }
 
           .container {
@@ -94,14 +123,54 @@ const Home = ({ darkMode }) => {
 
           // ***** About Section *****
 
-          section.aboutMeSection {
+          section.about-me {
             padding-top: 1.8em;
             padding-bottom: 1.8em;
-          }
-
-          section.aboutMeSection h2 {
             color: var(--font-color);
           }
+
+          section.about-me h2 {
+            font-size: min(max(1.8rem, 4vw), 3rem);
+            margin-bottom: 0.5em;
+          }
+
+          .inner-about-me {
+            padding: 1em 1.5em;
+          }
+
+          .inner-about-me p {
+            font-size: 20px;
+            line-height: 1.8;
+          }
+
+          // ***** Contact Section *****
+
+          .contact {
+            background: var(--contact-color);
+            color: var(--font-color);
+            padding-top: 1rem;
+          }
+
+          .contact h2 {
+            font-size: 40px;
+            margin-bottom: 0;
+          }
+
+          #email-me {
+            margin-top: 0;
+          }
+
+          .contact-img-email {
+            display: flex;
+            padding-bottom: 2rem;
+          }
+
+          .contact-info {
+            padding-top: 5rem;
+            padding-left: 1rem;
+          }
+
+          // ***** Typewriter Keyframes *****
 
           @keyframes blinking-cursor {
             0% {
@@ -115,15 +184,21 @@ const Home = ({ darkMode }) => {
             }
           }
 
+          img {
+            height: 200px;
+          }
+
+          //  ***** Media Queries Keyframes *****
+
           @media (max-width: 1024px) {
             .home-page-hero {
-              height: calc((12.5px * 100) - 55px);
+              height: calc((13px * 100) - 55px);
             }
           }
 
           @media (max-width: 768px) {
             .home-page-hero {
-              height: calc((9px * 100) - 55px);
+              height: calc((10px * 100) - 55px);
             }
 
             .hero-text {
@@ -139,9 +214,9 @@ const Home = ({ darkMode }) => {
             }
           }
 
-          @media (max-width: 576px) {
+          @media (max-width: 375px) {
             .home-page-hero {
-              height: calc((7px * 100) - 55px);
+              height: calc((8px * 100) - 55px);
             }
 
             .hero-text {
@@ -156,12 +231,6 @@ const Home = ({ darkMode }) => {
               font-size: 15.5px;
               font-weight: 300;
               margin: 0 0 4px;
-            }
-          }
-
-          @media (max-width: 375px) {
-            .home-page-hero {
-              height: calc((7px * 100) - 55px);
             }
           }
         `}

@@ -24,6 +24,10 @@ const Navbar = ({ darkMode, toggleMode }) => {
         nav {
           background-color: var(--bg-color);
           box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+          position: fixed;
+          width: 100%;
+          top: 0 !important;
+          z-index: 1000;
         }
         .container {
           width: 100%;
