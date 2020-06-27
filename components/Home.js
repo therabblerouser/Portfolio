@@ -30,15 +30,7 @@ const Home = ({ darkMode }) => {
             <i className="material-icons">expand_more</i>
           </div>
         </div>
-        <section className="contact">
-          <div className="container">
-            <h2>Contact Me</h2>
-            <p id="email-me">Email me, I'd love to work with you</p>
-            <div className="contact-img-email">
-              <img src="toa-heftiba-ImqbTNUoTD0-unsplash.jpg" alt="Joe" />
-            </div>
-          </div>
-        </section>
+
         <section className="about-me container">
           <h2>About Me</h2>
           <div className="inner-about-me">
@@ -62,6 +54,23 @@ const Home = ({ darkMode }) => {
             </p>
           </div>
         </section>
+        <section className="contact">
+          <div className="container">
+            <h2>Projects</h2>
+            <div className="contact-img-email">
+              <p>Project 1</p>
+              <p>Project 2</p>
+              <p>Project 3</p>
+              <p>Project 4</p>
+              <p>Project 5</p>
+            </div>
+          </div>
+        </section>
+        <footer>
+          <div className="container">
+            <h4>Footer links</h4>
+          </div>
+        </footer>
       </div>
 
       <style jsx>
@@ -156,13 +165,11 @@ const Home = ({ darkMode }) => {
             margin-bottom: 0;
           }
 
-          #email-me {
-            margin-top: 0;
-          }
-
           .contact-img-email {
             display: flex;
+            flex-direction: column;
             padding-bottom: 2rem;
+            margin-top: 2em;
           }
 
           .contact-info {
