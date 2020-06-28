@@ -61,15 +61,15 @@ const Index = () => {
           line-height: 1.15;
         }
 
+        * {
+          box-sizing: border-box;
+        }
+
         :root {
           --bg-color: ${!darkMode ? '#fff' : '#202020'};
           --font-color: ${!darkMode ? '#202020' : '#fff'};
           --accent-color: #82adc9;
           --contact-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}</style>
     </div>
@@ -79,17 +79,3 @@ const Index = () => {
 Index.getIntial;
 
 export default Index;
-
-// body.dark {
-//   --bg-color: #202020;
-//   --font-color-body: #fff;
-//   --tag-bg: #131313;
-//   --tag-color: #f2f2f2;
-//   --contact-bg: #1c1c1c;
-//   --contact-color: #fff;
-//   --form-bg: #131313;
-//   --form-button-bg: #0e0e0e;
-//   --form-button-color: var(--font-color-accent);
-//   --hr-bg: #fff;
-//   --blockquote-color: hsla(0,0%,100%,0.8);
-// }
