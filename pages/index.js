@@ -68,6 +68,8 @@ const Index = () => {
         :root {
           --bg-color: ${!darkMode ? '#fff' : '#202020'};
           --font-color: ${!darkMode ? '#202020' : '#fff'};
+          --card-bg-color: ${darkMode ? '#fff' : '#202020'};
+          --card-font-color: #202020;
           --accent-color: #82adc9;
           --contact-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
         }

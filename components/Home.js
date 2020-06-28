@@ -58,6 +58,41 @@ const Home = ({ darkMode }) => {
           <div className="container">
             <h2>Projects</h2>
             <div className="contact-img-email">
+              <div class="col s12 m7">
+                <div class="card horizontal">
+                  <div
+                    class="card-image"
+                    style={{
+                      border: 'none',
+                    }}
+                  ></div>
+                  <div class="card-stacked">
+                    <div
+                      class="card-content"
+                      style={{ background: 'var( --contact-color)' }}
+                    >
+                      <h4>Title</h4>
+                      <p>This is a description of the Project. I made this.</p>
+                    </div>
+                    <div
+                      class="card-action"
+                      style={{
+                        background: 'var( --contact-color)',
+                        border: 'none',
+                      }}
+                    >
+                      <span
+                        class="badge"
+                        style={{ background: 'var( --contact-color)' }}
+                      >
+                        React
+                      </span>
+                      <span class="badge">Node</span>
+                      <span class="badge">Airtable</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <p>Project 1</p>
               <p>Project 2</p>
               <p>Project 3</p>
