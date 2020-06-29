@@ -56,44 +56,34 @@ const Home = ({ darkMode }) => {
         </section>
         <section className="contact">
           <div className="container">
-            <h2>Projects</h2>
+            <h2 style={{ color: '#fff' }}>Projects</h2>
             <div className="contact-img-email">
-              <div class="col s12 m7">
-                <div class="card horizontal">
-                  <div
-                    class="card-image"
-                    style={{
-                      border: 'none',
-                    }}
-                  ></div>
-                  <div class="card-stacked">
-                    <div
-                      class="card-content"
-                      style={{ background: 'var( --contact-color)' }}
-                    >
-                      <h4>Title</h4>
-                      <p>This is a description of the Project. I made this.</p>
+              <div className="col s12 m7">
+                <div
+                  className="card horizontal"
+                  style={{
+                    background: 'var(--card-color)',
+                    boxShadow: '',
+                  }}
+                >
+                  <div className="card-stacked">
+                    <div className="card-content">
+                      <h4 style={{ color: 'var(--card-title-color)' }}>
+                        Portfolio
+                      </h4>
+                      <p>
+                        This is my portfolio project. Check out the code I
+                        wrote.
+                      </p>
                     </div>
-                    <div
-                      class="card-action"
-                      style={{
-                        background: 'var( --contact-color)',
-                        border: 'none',
-                      }}
-                    >
-                      <span
-                        class="badge"
-                        style={{ background: 'var( --contact-color)' }}
-                      >
-                        React
-                      </span>
-                      <span class="badge">Node</span>
-                      <span class="badge">Airtable</span>
+                    <div className="card-action">
+                      <span className="badge">React</span>
+                      <span className="badge">Node</span>
+                      <span className="badge">Airtable</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <p>Project 1</p>
               <p>Project 2</p>
               <p>Project 3</p>
               <p>Project 4</p>
@@ -190,7 +180,7 @@ const Home = ({ darkMode }) => {
           // ***** Contact Section *****
 
           .contact {
-            background: var(--contact-color);
+            background: var(--projects-color);
             color: var(--font-color);
             padding-top: 1rem;
           }
