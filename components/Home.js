@@ -1,7 +1,34 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
+import Project from './Project';
 
 const Home = ({ darkMode }) => {
+  const projects = [
+    {
+      title: 'Portfolio Project',
+      description: 'This is my portfolio project. Check out the code I wrote.',
+      tools: 'Airtable | React | Node',
+    },
+
+    {
+      title: 'Portfolio Project',
+      description: 'This is my portfolio project. Check out the code I wrote.',
+      tools: 'Airtable | React | Node',
+    },
+
+    {
+      title: 'Portfolio Project',
+      description: 'This is my portfolio project. Check out the code I wrote.',
+      tools: 'Airtable | React | Node',
+    },
+
+    {
+      title: 'Portfolio Project',
+      description: 'This is my portfolio project. Check out the code I wrote.',
+      tools: 'Airtable | React | Node',
+    },
+  ];
+
   return (
     <>
       <div className="home-page-main">
@@ -58,36 +85,10 @@ const Home = ({ darkMode }) => {
           <div className="container">
             <h2 style={{ color: '#fff' }}>Projects</h2>
             <div className="contact-img-email">
-              <div className="col s12 m7">
-                <div
-                  className="card horizontal"
-                  style={{
-                    background: 'var(--card-color)',
-                    boxShadow: '',
-                  }}
-                >
-                  <div className="card-stacked">
-                    <div className="card-content">
-                      <h4 style={{ color: 'var(--card-title-color)' }}>
-                        Portfolio
-                      </h4>
-                      <p>
-                        This is my portfolio project. Check out the code I
-                        wrote.
-                      </p>
-                    </div>
-                    <div className="card-action">
-                      <span className="badge">React</span>
-                      <span className="badge">Node</span>
-                      <span className="badge">Airtable</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p>Project 2</p>
-              <p>Project 3</p>
-              <p>Project 4</p>
-              <p>Project 5</p>
+              <Project />
+              <Project />
+              <Project />
+              <Project />
             </div>
           </div>
         </section>
