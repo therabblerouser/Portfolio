@@ -72,7 +72,7 @@ const Index = () => {
           --projects-title-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
           --projects-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
           --card-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
-          --card-title-color: ${!darkMode ? '#202020' : '#82adc9'};
+          --card-title-color: ${!darkMode ? '#fff' : '#82adc9'};
         }
       `}</style>
     </div>
