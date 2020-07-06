@@ -1,31 +1,28 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import Project from './Project';
+import ProjectList from './ProjectList';
 
-const Home = ({ darkMode }) => {
+const Home = () => {
   const projects = [
     {
       title: 'Portfolio Project',
       description: 'This is my portfolio project. Check out the code I wrote.',
-      tools: 'Airtable | React | Node',
+      tools: 'React | Next | Airtable',
+      repository: 'https://github.com/therabblerouser',
     },
 
     {
-      title: 'Portfolio Project',
-      description: 'This is my portfolio project. Check out the code I wrote.',
-      tools: 'Airtable | React | Node',
+      title: 'Minesweeper',
+      description: 'This is classic game minesweeper built with React.',
+      tools: 'React | Next | Firebase',
+      repository: 'https://github.com/therabblerouser',
     },
 
     {
-      title: 'Portfolio Project',
-      description: 'This is my portfolio project. Check out the code I wrote.',
-      tools: 'Airtable | React | Node',
-    },
-
-    {
-      title: 'Portfolio Project',
-      description: 'This is my portfolio project. Check out the code I wrote.',
-      tools: 'Airtable | React | Node',
+      title: 'Moneytracker',
+      description: 'This is a budget tracker used to keep track or your money.',
+      tools: 'React | Next | Firebase',
+      repository: 'https://github.com/therabblerouser',
     },
   ];
 
@@ -85,10 +82,7 @@ const Home = ({ darkMode }) => {
           <div className="container">
             <h2 style={{ color: '#fff' }}>Projects</h2>
             <div className="contact-img-email">
-              <Project />
-              <Project />
-              <Project />
-              <Project />
+              <ProjectList projects={projects} />
             </div>
           </div>
         </section>
