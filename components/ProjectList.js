@@ -13,11 +13,6 @@ const ProjectList = ({ projects }) => {
               <p>{project.description}</p>
             </div>
             <div className="card-action">
-              <span>
-                <a href={project.repository}>
-                  <i class="fab fa-github"></i>
-                </a>
-              </span>
               <span className="badge">{project.tools}</span>
             </div>
           </div>
@@ -45,10 +40,6 @@ const ProjectList = ({ projects }) => {
 
         span.badge {
           color: #fff;
-        }
-
-        i.fa-github {
-          font-size: 25px;
         }
 
       `}
