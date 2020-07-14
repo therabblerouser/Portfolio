@@ -3,6 +3,7 @@ Airtable.configure({
   apiKey: 'keytTOxVwuu6mxNsL',
 });
 
+console.log(process.env.AIRTABLE_KEY);
 module.exports = {
   // Get all Airtable posts
   getAirtablePosts: () => {
