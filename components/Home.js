@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactRotatingText from 'react-rotating-text';
 import ProjectList from './ProjectList';
 
 const Home = () => {
+  const year = new Date().getFullYear().toString();
+
   const projects = [
     {
       title: 'Portfolio Project',
@@ -82,7 +84,13 @@ const Home = () => {
         </section>
         <footer>
           <div className="container">
-            <h4>Footer links</h4>
+            <div className="footer-content">
+              <div className="footer-icons">
+                <i className="material-icons">wb_cloudy</i>
+                <i className="material-icons">wb_incandescent</i>
+              </div>
+              <p>Joe McCann {year}</p>
+            </div>
           </div>
         </footer>
       </div>
@@ -99,7 +107,6 @@ const Home = () => {
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             margin-bottom: 0.75em;
             height: 92vh;
           }
@@ -145,11 +152,11 @@ const Home = () => {
             padding-bottom: 1.5em;
             color: #fff;
             background: var(--projects-color);
-            height: 91vh;
+            height: 92vh;
           }
 
           section.about-me h2 {
-            font-size: min(max(1.8rem, 4vw), 3rem);
+            font-size: 2.5rem;
             margin-bottom: 0.5em;
           }
 
@@ -170,19 +177,19 @@ const Home = () => {
             padding-bottom: 1.5em;
           }
 
-          .project h2 {
-            font-size: 40px;
-            margin-bottom: 0;
+          section.project h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
           }
 
-          .project-img-email {
+          section.project-img-email {
             display: flex;
             flex-direction: column;
             padding-bottom: 2rem;
             margin-top: 2em;
           }
 
-          .project-info {
+          section.project-info {
             padding-top: 5rem;
             padding-left: 1rem;
           }
@@ -194,9 +201,25 @@ const Home = () => {
             height: 9vh;
           }
 
-          footer h4 {
+          .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1em;
+          }
+
+          .footer-icons {
+            display: flex;
+            align-items: center;
+          }
+
+          footer i {
             color: #fff;
-            padding-top: 0.5em;
+            margin-left: 1em;
+          }
+
+          footer p {
+            color: #fff;
           }
 
           // ***** Typewriter Keyframes *****
@@ -227,7 +250,7 @@ const Home = () => {
 
             section.about-me {
               display: flex;
-              justify-content: center;
+              justify-content: space-between;
               align-items: center;
               padding-top: 3em;
               height: 95vh;
