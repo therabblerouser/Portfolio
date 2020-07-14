@@ -88,6 +88,4 @@ const Index = () => {
   );
 };
 
-Index.getIntial;
-
 export default Index;
