@@ -31,15 +31,15 @@ const ProjectList = ({ projects }) => {
         }
 
         h4 {
-          color: var(--card-title-color)
+          color: #82adc9;
         }
 
         .card-content {
-          color: #fff;
+          color: var(--card-description-color);
         }
 
         span.badge {
-          color: #fff;
+          color: var(--card-description-color);
         }
 
       `}

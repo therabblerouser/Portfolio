@@ -52,33 +52,30 @@ const Home = () => {
           </div>
         </div>
 
-        <section className="about-me container">
-          <h2>About Me</h2>
-          <div className="inner-about-me">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-              ex aliquam tempore explicabo cum perferendis officia molestiae
-              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
-              nostrum obcaecati a!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-              ex aliquam tempore explicabo cum perferendis officia molestiae
-              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
-              nostrum obcaecati a!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-              ex aliquam tempore explicabo cum perferendis officia molestiae
-              iure eos dolor dolorum numquam distinctio quae ab pariatur ad
-              nostrum obcaecati a!
-            </p>
+        <section className="about-me">
+          <div className="container">
+            {' '}
+            <h2>About Me</h2>
+            <div className="inner-about-me">
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+                ex aliquam tempore explicabo cum perferendis officia molestiae
+                iure eos dolor dolorum numquam distinctio quae ab pariatur ad
+                nostrum obcaecati a!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
+                ex aliquam tempore explicabo cum perferendis officia molestiae
+                iure eos dolor dolorum numquam distinctio quae ab pariatur ad
+                nostrum obcaecati a!
+              </p>
+            </div>
           </div>
         </section>
-        <section className="contact">
+        <section className="project">
           <div className="container">
-            <h2 style={{ color: '#fff' }}>Projects</h2>
-            <div className="contact-img-email">
+            <h2>Projects</h2>
+            <div className="project-img-email">
               <ProjectList projects={projects} />
             </div>
           </div>
@@ -103,7 +100,8 @@ const Home = () => {
             justify-content: center;
             align-items: center;
             position: relative;
-            height: calc((max(7.5px, 1vh) * 100) - 55px);
+            margin-bottom: 0.75em;
+            height: 92vh;
           }
 
           .container {
@@ -140,9 +138,14 @@ const Home = () => {
           // ***** About Section *****
 
           section.about-me {
-            padding-top: 1.8em;
-            padding-bottom: 1.8em;
-            color: var(--font-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            color: #fff;
+            background: var(--projects-color);
+            height: 91vh;
           }
 
           section.about-me h2 {
@@ -159,29 +162,41 @@ const Home = () => {
             line-height: 1.8;
           }
 
-          // ***** Contact Section *****
+          // ***** project Section *****
 
-          .contact {
-            background: var(--projects-color);
+          .project {
             color: var(--font-color);
-            padding-top: 1rem;
+            padding-top: 1.5em;
+            padding-bottom: 1.5em;
           }
 
-          .contact h2 {
+          .project h2 {
             font-size: 40px;
             margin-bottom: 0;
           }
 
-          .contact-img-email {
+          .project-img-email {
             display: flex;
             flex-direction: column;
             padding-bottom: 2rem;
             margin-top: 2em;
           }
 
-          .contact-info {
+          .project-info {
             padding-top: 5rem;
             padding-left: 1rem;
+          }
+
+          // ***** Footer Section *****
+
+          footer {
+            background: var(--projects-color);
+            height: 9vh;
+          }
+
+          footer h4 {
+            color: #fff;
+            padding-top: 0.5em;
           }
 
           // ***** Typewriter Keyframes *****
@@ -206,7 +221,23 @@ const Home = () => {
 
           @media (max-width: 1024px) {
             .home-page-hero {
-              height: calc((13px * 100) - 55px);
+              height: 94vh;
+              margin-bottom: 1.65em;
+            }
+
+            section.about-me {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding-top: 3em;
+              height: 95vh;
+            }
+
+            section.project {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 95vh;
             }
           }
 
