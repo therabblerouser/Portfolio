@@ -6,18 +6,33 @@ const About = () => (
       <div className="container">
         <h2>About</h2>
         <div className="inner-about-me">
+          <div className="img-par">
+            <img
+              src="./toa-heftiba-ImqbTNUoTD0-unsplash.jpg"
+              alt="Joe"
+              className="circle"
+            />
+            <p>
+              Hi! My name is Joe McCann. I am a junior Full Stack webdeveloper
+              who specializes in React, Node and Next.js.
+            </p>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, ex
-            aliquam tempore explicabo cum perferendis officia molestiae iure eos
-            dolor dolorum numquam distinctio quae ab pariatur ad nostrum
-            obcaecati a!
+            I love spending time building javascript projects and learning about
+            new technologies and techniques.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, ex
-            aliquam tempore explicabo cum perferendis officia molestiae iure eos
-            dolor dolorum numquam distinctio quae ab pariatur ad nostrum
-            obcaecati a!
+            I am currently looking for work. Send me a message, I would love to
+            work with you in the near future!
           </p>
+          <div style={{ marginTop: '5em' }}>
+            <p>
+              contact:{' '}
+              <a style={{ color: '#fff' }} href="mailto:tojmccann@gmail.com">
+                tojmccann@gmail.com
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -42,6 +57,21 @@ const About = () => (
 
         .inner-about-me {
           padding: 1em 1.5em;
+        }
+
+        .inner-about-me img {
+          height: 7em;
+          width: 7em;
+        }
+
+        .img-par {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .img-par p {
+          margin-left: 1em;
         }
 
         .inner-about-me p {

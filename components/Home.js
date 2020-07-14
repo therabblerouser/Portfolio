@@ -1,9 +1,11 @@
 import React from 'react';
+
+import axios from 'axios';
+import useSWR from 'swr';
+
 import Hero from './homeSections/Hero';
 import About from './homeSections/About';
 import ProjectList from './homeSections/ProjectList';
-import axios from 'axios';
-import useSWR from 'swr';
 
 const Home = () => {
   const fetcher = async (url) => {
@@ -14,7 +16,7 @@ const Home = () => {
 
   const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
 
-  if (error) return <div></div>;
+  if (error) return;
   if (!data) return <div>loading...</div>;
 
   return (
