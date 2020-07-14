@@ -65,6 +65,13 @@ const Index = () => {
           box-sizing: border-box;
         }
 
+        .container {
+          padding: 0 1.4em;
+          width: 100%;
+          max-width: 700px;
+          margin: 0 auto;
+        }
+
         :root {
           --bg-color: ${!darkMode ? '#fff' : '#202020'};
           --font-color: ${!darkMode ? '#202020' : '#fff'};

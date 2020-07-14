@@ -9,11 +9,13 @@
   },
   "dependencies": {
     "airtable": "^0.8.1",
+    "axios": "^0.19.2",
     "jquery": "^3.5.1",
     "materialize-css": "^1.0.0",
     "next": "9.3.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-rotating-text": "^1.4.1"
+    "react-rotating-text": "^1.4.1",
+    "swr": "^0.2.3"
   }
 }

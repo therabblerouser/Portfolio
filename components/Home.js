@@ -1,32 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
-import ProjectList from './ProjectList';
+import ProjectList from './homeSections/ProjectList';
+import axios from 'axios';
+import useSWR from 'swr';
 
 const Home = () => {
   const year = new Date().getFullYear().toString();
 
-  const projects = [
-    {
-      title: 'Portfolio Project',
-      description: 'This is my portfolio project. Check out the code I wrote.',
-      tools: 'React | Next | Airtable',
-      repository: 'https://github.com/therabblerouser',
-    },
+  const fetcher = async (url) => {
+    let res = await axios.get(url);
+    let { data } = res.data;
+    return data;
+  };
 
-    {
-      title: 'Minesweeper',
-      description: 'This is classic game minesweeper built with React.',
-      tools: 'React | Next | Firebase',
-      repository: 'https://github.com/therabblerouser',
-    },
+  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
 
-    {
-      title: 'Moneytracker',
-      description: 'This is a budget tracker used to keep track or your money.',
-      tools: 'React | Next | Firebase',
-      repository: 'https://github.com/therabblerouser',
-    },
-  ];
+  if (error) return <div></div>;
+  if (!data) return <div>loading...</div>;
 
   return (
     <>
@@ -57,7 +47,7 @@ const Home = () => {
         <section className="about-me">
           <div className="container">
             {' '}
-            <h2>About Me</h2>
+            <h2>About</h2>
             <div className="inner-about-me">
               <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
@@ -74,14 +64,10 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="project">
-          <div className="container">
-            <h2>Projects</h2>
-            <div className="project-img-email">
-              <ProjectList projects={projects} />
-            </div>
-          </div>
+        <section>
+          <ProjectList data={data} />
         </section>
+
         <footer>
           <div className="container">
             <div className="footer-content">
@@ -109,13 +95,6 @@ const Home = () => {
             align-items: center;
             margin-bottom: 0.75em;
             height: 92vh;
-          }
-
-          .container {
-            padding: 0 1.4em;
-            width: 100%;
-            max-width: 700px;
-            margin: 0 auto;
           }
 
           .hero-text {
@@ -167,31 +146,6 @@ const Home = () => {
           .inner-about-me p {
             font-size: 20px;
             line-height: 1.8;
-          }
-
-          // ***** project Section *****
-
-          .project {
-            color: var(--font-color);
-            padding-top: 1.5em;
-            padding-bottom: 1.5em;
-          }
-
-          section.project h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1em;
-          }
-
-          section.project-img-email {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 2rem;
-            margin-top: 2em;
-          }
-
-          section.project-info {
-            padding-top: 5rem;
-            padding-left: 1rem;
           }
 
           // ***** Footer Section *****
