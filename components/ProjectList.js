@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectList = ({ projects }) => {
   const listProjects = projects.map((project) => {
     return (
-      <div className="col s12 m7">
+      <div key={project.title} className="col s12 m7">
         <div className="card horizontal">
           <div className="card-stacked">
             <div className="card-content">

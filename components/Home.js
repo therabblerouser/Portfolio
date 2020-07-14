@@ -50,9 +50,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="expand-icon">
-            <i className="material-icons">expand_more</i>
-          </div>
         </div>
 
         <section className="about-me container">
@@ -138,16 +135,6 @@ const Home = () => {
           .react-rotating-text-cursor {
             animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99)
               0s infinite;
-          }
-
-          .expand-icon {
-            position: absolute;
-            bottom: 20px;
-          }
-
-          .expand-icon i {
-            color: var(--accent-color);
-            font-size: 40px;
           }
 
           // ***** About Section *****
