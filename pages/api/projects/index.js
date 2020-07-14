@@ -1,15 +1,18 @@
 import { getAirtablePosts } from '../../../helpers/airtable';
 import { serialize } from '../../../helpers/serialize';
 
-module.exports = (req, res) => {
-  Promise.resolve(getAirtablePosts())
-    .then((data) => {
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      return res.end(serialize(data));
-    })
-    .catch((error) => {
-      console.log(error);
-      res.writeHead(200, { 'Content-Type': 'application/json' });
-      return res.end(serialize({}));
-    });
+module.exports = async (req, res) => {
+  return new Promise((resolve, reject) => {
+    getAirtablePosts()
+      .then((data) => {
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(serialize(data));
+        resolve();
+      })
+      .catch((error) => {
+        res.json(error);
+        res.status(405).end();
+        return resolve();
+      });
+  });
 };
