@@ -1,4 +1,5 @@
 import React from 'react';
+import { GitHub, LinkedIn } from '@material-ui/icons';
 
 const Footer = () => {
   const year = new Date().getFullYear().toString();
@@ -9,8 +10,12 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-icons">
-              <i className="fab fa-twitter"></i>
-              <i className="material-icons">wb_incandescent</i>
+              <a href="https://github.com">
+                <GitHub />
+              </a>
+              <a href="https://linkedin.com">
+                <LinkedIn />
+              </a>
             </div>
             <p>Joe McCann {year}</p>
           </div>
@@ -31,14 +36,9 @@ const Footer = () => {
             padding-top: 1em;
           }
 
-          .footer-icons {
-            display: flex;
-            align-items: center;
-          }
-
-          footer i {
+          .footer-icons a {
             color: #fff;
-            margin-left: 1em;
+            padding-left: 1em;
           }
 
           footer p {
