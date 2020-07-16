@@ -15,8 +15,12 @@ const LinkIcons = () => {
       <style jsx>
         {`
           .icons a {
-            color: #fff;
             padding-left: 1em;
+            color: var(--font-color);
+          }
+
+          .icons a:hover {
+            color: #82adc9;
           }
         `}
       </style>

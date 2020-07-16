@@ -13,24 +13,23 @@ const About = () => (
               className="circle"
             />
             <p>
-              Hi! My name is Joe McCann. I am a junior Full Stack webdeveloper
+              Hi! My name is Joe McCann. I am a junior Full Stack Web Developer
               who specializes in React, Node and Next.js.
             </p>
           </div>
           <p>
             I love spending time building javascript projects and learning about
-            new technologies and techniques.
+            new technologies.
           </p>
           <p>
             I am currently looking for work. Send me a message, I would love to
             work with you in the near future!
           </p>
-          <div style={{ marginTop: '5em' }}>
+
+          <div className="contact-me">
             <p>
-              contact:{' '}
-              <a style={{ color: '#fff' }} href="mailto:tojmccann@gmail.com">
-                tojmccann@gmail.com
-              </a>
+              Contact:{' '}
+              <a href="mailto:tojmccann@gmail.com">tojmccann@gmail.com</a>
             </p>
           </div>
         </div>
@@ -43,8 +42,6 @@ const About = () => (
           display: flex;
           justify-content: center;
           align-items: center;
-          padding-top: 1.5em;
-          padding-bottom: 1.5em;
           color: #fff;
           background: var(--projects-color);
           height: 92vh;
@@ -66,6 +63,7 @@ const About = () => (
 
         .img-par {
           display: flex;
+          flex
           justify-content: space-between;
           align-items: center;
         }
@@ -79,6 +77,17 @@ const About = () => (
           line-height: 1.8;
         }
 
+        .contact-me {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 5em;
+          margin-right: 3em;
+        }
+
+        .contact-me p a {
+          color: #fff;
+        }
+
         //  ***** Media Queries *****
 
         @media (max-width: 1024px) {
@@ -88,6 +97,13 @@ const About = () => (
             align-items: center;
             padding-top: 3em;
             height: 95vh;
+          }
+        }
+
+        @media (max-width: 375px) {
+          .inner-about-me p {
+            font-size: 15px;
+            line-height: 1.3;
           }
         }
       `}

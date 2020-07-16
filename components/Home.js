@@ -23,8 +23,8 @@ const Home = () => {
     <>
       <div className="home-page-main">
         <Hero />
-        <About />
         <ProjectList data={data} />
+        <About />
       </div>
 
       <style jsx>

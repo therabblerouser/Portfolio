@@ -1,3 +1,5 @@
+// import { WbSunny, Brightness3 } from '@material-ui/icons';
+
 const Navbar = ({ darkMode, toggleMode }) => {
   return (
     <>
@@ -8,9 +10,10 @@ const Navbar = ({ darkMode, toggleMode }) => {
               joemccann.dev
             </a>
             <div className="section-navs">
-              <a href="#">About</a>
               <a href="/projects">Projects</a>
+              <a href="#">About</a>
               <button onClick={toggleMode}>
+                {/* {!darkMode ? <Brightness3 /> : <WbSunny />} */}
                 <i className="material-icons">
                   {!darkMode ? 'brightness_2' : 'brightness_high'}
                 </i>

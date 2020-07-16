@@ -64,6 +64,13 @@ const Hero = () => (
             0s infinite;
         }
 
+        .links {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 2em;
+          margin-right: 2em;
+        }
+
         //  ***** Media Queries *****
 
         @media (max-width: 1024px) {
@@ -89,13 +96,6 @@ const Hero = () => (
           .sliding-text p {
             font-size: 28px;
           }
-        }
-
-        .links {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: 2em;
-          margin-right: 2em;
         }
 
         @media (max-width: 375px) {

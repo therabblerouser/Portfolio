@@ -20,7 +20,6 @@ const Footer = () => {
       <style jsx>
         {`
           footer {
-            background: var(--projects-color);
             height: 9vh;
           }
 
@@ -32,7 +31,7 @@ const Footer = () => {
           }
 
           footer p {
-            color: #fff;
+            color: var(--font-color);
           }
         `}
       </style>
