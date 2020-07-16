@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "airtable": "^0.8.1",
     "axios": "^0.19.2",
     "jquery": "^3.5.1",

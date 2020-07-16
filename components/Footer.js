@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-icons">
-              <i className="material-icons">wb_cloudy</i>
+              <i className="fab fa-twitter"></i>
               <i className="material-icons">wb_incandescent</i>
             </div>
             <p>Joe McCann {year}</p>
