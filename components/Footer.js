@@ -1,5 +1,5 @@
 import React from 'react';
-import { GitHub, LinkedIn } from '@material-ui/icons';
+import LinkIcons from './LinkIcons';
 
 const Footer = () => {
   const year = new Date().getFullYear().toString();
@@ -9,13 +9,8 @@ const Footer = () => {
       <footer>
         <div className="container">
           <div className="footer-content">
-            <div className="footer-icons">
-              <a href="https://github.com">
-                <GitHub />
-              </a>
-              <a href="https://linkedin.com">
-                <LinkedIn />
-              </a>
+            <div className="link">
+              <LinkIcons />
             </div>
             <p>Joe McCann {year}</p>
           </div>
@@ -34,11 +29,6 @@ const Footer = () => {
             justify-content: space-between;
             align-items: center;
             padding-top: 1em;
-          }
-
-          .footer-icons a {
-            color: #fff;
-            padding-left: 1em;
           }
 
           footer p {

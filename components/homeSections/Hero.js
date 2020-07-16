@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactRotatingText from 'react-rotating-text';
+import LinkIcons from '../LinkIcons';
 
 const Hero = () => (
   <>
@@ -22,6 +23,9 @@ const Hero = () => (
               .js developer
             </p>
           </div>
+        </div>
+        <div className="links">
+          <LinkIcons />
         </div>
       </div>
     </div>
@@ -85,6 +89,12 @@ const Hero = () => (
           .sliding-text p {
             font-size: 28px;
           }
+        }
+
+        .links {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 2em;
         }
 
         @media (max-width: 375px) {
