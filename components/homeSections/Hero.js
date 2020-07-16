@@ -95,6 +95,7 @@ const Hero = () => (
           display: flex;
           justify-content: flex-end;
           margin-top: 2em;
+          margin-right: 2em;
         }
 
         @media (max-width: 375px) {
