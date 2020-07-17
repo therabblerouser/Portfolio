@@ -25,7 +25,6 @@ const About = () => (
             I am currently looking for work. Send me a message, I would love to
             work with you in the near future!
           </p>
-
           <div className="contact-me">
             <p>
               Contact:{' '}
