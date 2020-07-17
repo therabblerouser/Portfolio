@@ -81,7 +81,7 @@ const About = () => (
           display: flex;
           justify-content: flex-end;
           margin-top: 5em;
-          margin-right: 3em;
+        
         }
 
         .contact-me p a {
