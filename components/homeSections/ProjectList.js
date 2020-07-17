@@ -23,7 +23,7 @@ const ProjectList = ({ data }) => {
 
   return (
     <>
-      <div className="project">
+      <div id="projects" className="project scrollspy">
         <div className="container">
           <h2>Projects</h2>
           <div className="project-img-email">{listProjects}</div>
@@ -37,6 +37,7 @@ const ProjectList = ({ data }) => {
          .project {
             color: var(--font-color);
             padding-top: 1.5em;
+            height: 110vh;
           }
 
           .project h2 {
@@ -77,11 +78,10 @@ const ProjectList = ({ data }) => {
 
         @media (max-width: 1024px) {
           
-          section.project {
+         .project {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 95vh;
           }
         }
       `}
