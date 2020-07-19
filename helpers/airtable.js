@@ -1,13 +1,14 @@
+require('dotenv').config();
+
 const Airtable = require('airtable');
 Airtable.configure({
-  apiKey: 'keytTOxVwuu6mxNsL',
+  apiKey: process.env.AIRTABLE_KEY,
 });
 
-console.log(process.env.AIRTABLE_KEY);
 module.exports = {
   // Get all Airtable posts
   getAirtablePosts: () => {
-    const base = new Airtable.base('app5T8xaRBzxIPYH4');
+    const base = new Airtable.base(process.env.AIRTABLE_BASE);
 
     return new Promise((resolve, reject) => {
       const AirtablePosts = [];
