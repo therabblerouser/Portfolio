@@ -10,7 +10,7 @@ const Hero = () => (
           <h1>Hi, I'm Joe</h1>
           <div className="sliding-text">
             <p>
-              and i'm your new{' '}
+              and i'm a junior{' '}
               <span>
                 <ReactRotatingText
                   typingInterval={140}
@@ -41,7 +41,6 @@ const Hero = () => (
         }
 
         .hero-text {
-          font-family: 'Mulish', sans-serif;
           font-weight: 800;
           padding-left: 4rem;
         }

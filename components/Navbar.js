@@ -54,7 +54,7 @@ const Navbar = ({ darkMode, toggleMode }) => {
           align-items: center;
           justify-content: space-between;
           padding-top: 0.5em;
-          font-family: 'Hind Siliguri', sans-serif;
+
           font-weight: 300;
         }
 

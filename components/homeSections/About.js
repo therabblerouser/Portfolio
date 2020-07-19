@@ -8,28 +8,31 @@ const About = () => (
         <div className="inner-about-me">
           <div className="img-par">
             <img
-              src="./B726CE7C-3EEB-457B-95D4-1754CC9C7D4C_4_5005_c.jpeg"
+              src="./F6835DBC-1D6F-45E3-A9DA-14B29B32CDB9_1_105_c.jpeg"
               alt="Joe"
-              className="circle"
             />
-            <p>
-              Hi! My name is Joe McCann. I am a junior Full Stack Web Developer
-              who specializes in React, Node and Next.js.
-            </p>
+            <div>
+              <p>
+                Hi! My name is <span>Joe McCann</span>. I am a junior Full Stack
+                Web Developer who specializes in React, Node and Next.js.
+              </p>
+              <p>
+                I love spending time building javascript projects and learning
+                about new technologies.
+              </p>
+              <p>
+                I am currently looking for work. Send me a message, I would love
+                to work with you in the near future!
+              </p>
+            </div>
           </div>
-          <p>
-            I love spending time building javascript projects and learning about
-            new technologies.
-          </p>
-          <p>
-            I am currently looking for work. Send me a message, I would love to
-            work with you in the near future!
-          </p>
+
           <div className="contact-me">
-            <p>
-              Contact:{' '}
-              <a href="mailto:tojmccann@gmail.com">tojmccann@gmail.com</a>
-            </p>
+            <h4>Lets build something together!</h4>
+            <p>I'd love to be apart of your next project.</p>
+            <a href="mailto:tojmccann@gmail.com">
+              <div className="email">tojmccann@gmail.com</div>
+            </a>
           </div>
         </div>
       </div>
@@ -37,60 +40,79 @@ const About = () => (
 
     <style jsx>
       {`
-             //  ******* ABOUT *******
+        //  ******* ABOUT *******
 
         .about-me {
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #fff;
+          color: var(--font-color);
           background: var(--projects-color);
-          height: 100vh;
+          height: 105vh;
         }
 
         .about-me h2 {
-          font-family: 'Hind Siliguri', sans-serif;
+          color: var(--font-color);
           font-weight: 500;
           font-size: 2.5rem;
           margin-bottom: 0.5em;
         }
 
         .inner-about-me {
-          padding: 1em 1.5em;
+          padding: 1em 1em;
         }
 
         .inner-about-me img {
-          font-family: 'Hind Siliguri', sans-serif;
-          font-weight: 400;
           height: 7em;
           width: 7em;
         }
 
         .img-par {
           display: flex;
-          flex
           justify-content: space-between;
           align-items: center;
         }
 
-        .img-par p {
-          margin-left: 1em;
+        .img-par img {
+          height: 25.5em;
+          width: 20em;
         }
 
-        .inner-about-me p {
+        .img-par p {
+          font-weight: 300;
+          margin-left: 1.5em;
           font-size: 20px;
           line-height: 1.8;
         }
 
-        .contact-me {
-          display: flex;
-          justify-content: flex-end;
-          margin-top: 5em;
-        
+        .img-par p span {
+          color: var(--accent-color);
         }
 
-        .contact-me p a {
-          color: #fff;
+        .contact-me {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .contact-me h4 {
+          font-weight: 500;
+          font-size: 2rem;
+          margin-bottom: 0;
+        }
+
+        .contact-me p {
+          font-size: 15px;
+          font-weight: 300;
+          margin-top: 0;
+        }
+
+        .email {
+          color: var(--font-color);
+          font-size: 18px;
+          width: 9.8em;
+          margin-top: 1em;
+          padding-bottom: 5px;
+          border-bottom: 2px solid var(--accent-color);
         }
 
         //  ***** Media Queries *****
@@ -101,12 +123,27 @@ const About = () => (
             justify-content: space-between;
             align-items: center;
             padding-top: 3em;
-            height: 95vh;
+            height: 100vh;
           }
         }
 
         @media (max-width: 375px) {
-          .inner-about-me p {
+          .about-me {
+            height: 100vh;
+          }
+
+          .img-par {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .img-par img {
+            height: 17em;
+            width: 21em;
+          }
+
+          .img-par p {
+            margin-left: 0.5em;
             font-size: 15px;
             line-height: 1.3;
           }

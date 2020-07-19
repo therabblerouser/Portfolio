@@ -40,7 +40,6 @@ const ProjectList = ({ data }) => {
           }
 
           .project h2 {
-            font-family: 'Hind Siliguri', sans-serif;
             font-weight: 500;
             font-size: 2.5rem;
             color: var(--font-color);
@@ -58,12 +57,11 @@ const ProjectList = ({ data }) => {
           }
 
         .project-desc {
-          font-family: 'Hind Siliguri', sans-serif;
-          font-weight: 400;
+          font-weight: 300;
           margin-top: 1em;
         }
 
-        h4 {
+        .project-desc h4 {
           color: #82adc9;
         }
 

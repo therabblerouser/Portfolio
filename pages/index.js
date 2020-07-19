@@ -70,6 +70,7 @@ const Index = () => {
       <style jsx global>{`
         html,
         body {
+          font-family: 'Hind Siliguri', sans-serif;
           padding: 0;
           margin: 0;
           background-color: var(--bg-color);
@@ -92,7 +93,7 @@ const Index = () => {
           --font-color: ${!darkMode ? '#202020' : '#fff'};
           --accent-color: #82adc9;
           --projects-title-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
-          --projects-color: ${!darkMode ? '#82adc9' : '#1c1c1c'};
+          --projects-color: ${!darkMode ? '#fff' : '#1c1c1c'};
           --card-color: ${!darkMode ? '#fff' : '#1c1c1c'};
           --card-description-color: ${!darkMode ? '#1c1c1c' : '#fff'};
         }
