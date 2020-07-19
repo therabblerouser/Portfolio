@@ -28,6 +28,8 @@ const Footer = () => {
             justify-content: space-between;
             align-items: center;
             padding-top: 1em;
+            font-family: 'Hind Siliguri', sans-serif;
+            font-weight: 500;
           }
 
           footer p {

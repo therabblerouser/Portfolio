@@ -1,4 +1,5 @@
 // import { WbSunny, Brightness3 } from '@material-ui/icons';
+import Link from 'next/link';
 
 const Navbar = ({ darkMode, toggleMode }) => {
   return (
@@ -10,8 +11,12 @@ const Navbar = ({ darkMode, toggleMode }) => {
               joemccann.dev
             </a>
             <div className="section-navs">
-              <a href="#projects">Projects</a>
-              <a href="#about">About</a>
+              <Link href="#projects">
+                <a>Projects</a>
+              </Link>
+              <Link href="#about">
+                <a>About</a>
+              </Link>
               <button onClick={toggleMode}>
                 {/* {!darkMode ? <Brightness3 /> : <WbSunny />} */}
                 <i className="material-icons">
@@ -33,6 +38,7 @@ const Navbar = ({ darkMode, toggleMode }) => {
           width: 100%;
           top: 0 !important;
           z-index: 1000;
+          font-weight: 600;
         }
         .container {
           width: 100%;
@@ -48,6 +54,8 @@ const Navbar = ({ darkMode, toggleMode }) => {
           align-items: center;
           justify-content: space-between;
           padding-top: 0.5em;
+          font-family: 'Hind Siliguri', sans-serif;
+          font-weight: 300;
         }
 
         .section-navs {

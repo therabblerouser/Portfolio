@@ -41,6 +41,8 @@ const Hero = () => (
         }
 
         .hero-text {
+          font-family: 'Mulish', sans-serif;
+          font-weight: 800;
           padding-left: 4rem;
         }
 

@@ -8,7 +8,7 @@ const About = () => (
         <div className="inner-about-me">
           <div className="img-par">
             <img
-              src="./76420DBC-5DC4-4DC0-B581-A6DBC06C79A8_1_102_o.jpeg"
+              src="./B726CE7C-3EEB-457B-95D4-1754CC9C7D4C_4_5005_c.jpeg"
               alt="Joe"
               className="circle"
             />
@@ -49,6 +49,8 @@ const About = () => (
         }
 
         .about-me h2 {
+          font-family: 'Hind Siliguri', sans-serif;
+          font-weight: 500;
           font-size: 2.5rem;
           margin-bottom: 0.5em;
         }
@@ -58,6 +60,8 @@ const About = () => (
         }
 
         .inner-about-me img {
+          font-family: 'Hind Siliguri', sans-serif;
+          font-weight: 400;
           height: 7em;
           width: 7em;
         }
