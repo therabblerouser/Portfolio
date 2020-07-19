@@ -127,7 +127,7 @@ const About = () => (
           }
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 875px) {
           .about-me {
             height: 100vh;
           }

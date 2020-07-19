@@ -99,7 +99,7 @@ const Hero = () => (
           }
         }
 
-        @media (max-width: 375px) {
+        @media (max-width: 875px) {
           .home-page-hero {
             height: calc((8px * 100) - 55px);
           }
