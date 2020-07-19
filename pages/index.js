@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
-=======
 import $ from 'jquery';
 
->>>>>>> scrollspy
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Footer from '../components/Footer';
@@ -33,15 +30,12 @@ const Index = () => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     $(document).ready(function () {
       $('.scrollspy').scrollSpy();
     });
   }, []);
 
->>>>>>> scrollspy
   return (
     <div>
       <Head>
