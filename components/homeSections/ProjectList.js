@@ -1,4 +1,5 @@
 import React from 'react';
+import { GitHub } from '@material-ui/icons';
 
 const ProjectList = ({ data }) => {
   const listProjects = data.map(
@@ -13,6 +14,9 @@ const ProjectList = ({ data }) => {
               <p>{description}</p>
             </div>
             <div className="card-action">
+              <a href={repository}>
+                <GitHub />
+              </a>
               <span className="badge">{tools}</span>
             </div>
           </div>
@@ -38,7 +42,7 @@ const ProjectList = ({ data }) => {
             color: var(--font-color);
             padding-top: 1.5em;
             padding-bottom: 1.5em;
-            height: 105vh;
+            height: 110vh;
           }
 
           .project h2 {
@@ -73,6 +77,19 @@ const ProjectList = ({ data }) => {
 
         span.badge {
           color: var(--card-description-color);
+        }
+
+        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+          color: var(--font-color);
+        }
+
+        .card .card-action a {
+          color: var(--font-color);
+          transition: color 0.1s ease;
+        }
+
+        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+          color: #82adc9;
         }
       `}
       </style>

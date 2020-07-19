@@ -3,9 +3,6 @@ import Head from 'next/head';
 
 import $ from 'jquery';
 
-import axios from 'axios';
-import useSWR from 'swr';
-
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Footer from '../components/Footer';
@@ -39,17 +36,6 @@ const Index = () => {
     });
   }, []);
 
-  const fetcher = async (url) => {
-    let res = await axios.get(url);
-    let { data } = res.data;
-    return data;
-  };
-
-  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
-
-  if (error) return;
-  if (!data) return <div>loading...</div>;
-
   return (
     <div>
       <Head>
@@ -72,7 +58,7 @@ const Index = () => {
       </Head>
 
       <main>
-        <Navbar data={data} toggleMode={toggleMode} />
+        <Navbar darkMode={darkMode} toggleMode={toggleMode} />
         <Home />
         <Footer />
       </main>
