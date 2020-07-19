@@ -1,4 +1,5 @@
 import React from 'react';
+import { GitHub } from '@material-ui/icons';
 
 const ProjectList = ({ data }) => {
   const listProjects = data.map(
@@ -13,6 +14,9 @@ const ProjectList = ({ data }) => {
               <p>{description}</p>
             </div>
             <div className="card-action">
+              <a href={repository}>
+                <GitHub />
+              </a>
               <span className="badge">{tools}</span>
             </div>
           </div>
@@ -23,20 +27,22 @@ const ProjectList = ({ data }) => {
 
   return (
     <>
-      <div className="project">
+      <div id="projects" className="project scrollspy">
         <div className="container">
           <h2>Projects</h2>
-          <div className="project-img-email">{listProjects}</div>
+          <div className="project-img">{listProjects}</div>
         </div>
       </div>
       <style>
         {`
-
-         // ***** project Section *****
-
          .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: var(--font-color);
             padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            height: 110vh;
           }
 
           .project h2 {
@@ -45,7 +51,7 @@ const ProjectList = ({ data }) => {
             color: var(--font-color);
           }
 
-          .project-img-email {
+          .project-img {
             display: flex;
             flex-direction: column;
             padding-bottom: 2rem;
@@ -73,16 +79,17 @@ const ProjectList = ({ data }) => {
           color: var(--card-description-color);
         }
 
-        //  ***** Media Queries Keyframes *****
+        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+          color: var(--font-color);
+        }
 
-        @media (max-width: 1024px) {
-          
-          section.project {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 95vh;
-          }
+        .card .card-action a {
+          color: var(--font-color);
+          transition: color 0.1s ease;
+        }
+
+        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+          color: #82adc9;
         }
       `}
       </style>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => (
   <>
-    <div className="about-me">
+    <div id="about" className="about-me scrollspy">
       <div className="container">
         <h2>About</h2>
         <div className="inner-about-me">
@@ -37,13 +37,15 @@ const About = () => (
 
     <style jsx>
       {`
+             //  ******* ABOUT *******
+
         .about-me {
           display: flex;
           justify-content: center;
           align-items: center;
           color: #fff;
           background: var(--projects-color);
-          height: 92vh;
+          height: 100vh;
         }
 
         .about-me h2 {

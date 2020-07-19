@@ -17,6 +17,7 @@ const LinkIcons = () => {
           .icons a {
             padding-left: 1em;
             color: var(--font-color);
+            transition: color 0.1s ease;
           }
 
           .icons a:hover {

@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
+<<<<<<< HEAD
+=======
+import $ from 'jquery';
+
+>>>>>>> scrollspy
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Footer from '../components/Footer';
+
+if (typeof window !== 'undefined') {
+  window.$ = $;
+  window.jQuery = $;
+  require('materialize-css');
+}
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(getMode());
@@ -22,6 +33,15 @@ const Index = () => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
   }, [darkMode]);
 
+<<<<<<< HEAD
+=======
+  useEffect(() => {
+    $(document).ready(function () {
+      $('.scrollspy').scrollSpy();
+    });
+  }, []);
+
+>>>>>>> scrollspy
   return (
     <div>
       <Head>
@@ -49,6 +69,7 @@ const Index = () => {
         <Footer />
       </main>
 
+<<<<<<< HEAD
       <style jsx>{`
         main {
           height: 100vh;
@@ -59,6 +80,8 @@ const Index = () => {
         }
       `}</style>
 
+=======
+>>>>>>> scrollspy
       <style jsx global>{`
         html,
         body {
