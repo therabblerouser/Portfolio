@@ -8,7 +8,7 @@ const About = () => (
         <div className="inner-about-me">
           <div className="img-par">
             <img
-              src="./toa-heftiba-ImqbTNUoTD0-unsplash.jpg"
+              src="./76420DBC-5DC4-4DC0-B581-A6DBC06C79A8_1_102_o.jpeg"
               alt="Joe"
               className="circle"
             />
