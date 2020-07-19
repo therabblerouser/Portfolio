@@ -4,23 +4,17 @@ import { GitHub } from '@material-ui/icons';
 const ProjectList = ({ data }) => {
   const listProjects = data.map(
     ({ id, title, repository, description, tools }) => (
-      <div key={id} className="col s12 m7">
-        <div className="card horizontal">
-          <div className="card-stacked">
-            <div className="card-content">
-              <a href={repository}>
-                <h4>{title}</h4>
-              </a>
-              <p>{description}</p>
-            </div>
-            <div className="card-action">
-              <a href={repository}>
-                <GitHub />
-              </a>
-              <span className="badge">{tools}</span>
-            </div>
-          </div>
+      <div key={id} className="project-desc">
+        <a href={repository}>
+          <h4>{title}</h4>
+        </a>
+        <div className="descriptions">
+          <a className="repository-link" href={repository}>
+            <GitHub />
+          </a>
+          <span>{tools}</span>
         </div>
+        <p>{description}</p>
       </div>
     )
   );
@@ -42,20 +36,18 @@ const ProjectList = ({ data }) => {
             color: var(--font-color);
             padding-top: 1.5em;
             padding-bottom: 1.5em;
-            height: 110vh;
+            height: 100vh;
           }
 
           .project h2 {
             font-size: 2.5rem;
-            margin-bottom: 1em;
             color: var(--font-color);
           }
 
           .project-img {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 2rem;
-            margin-top: 2em;
+           display: flex;
+           flex-direction: column;
+           margin-left: 1em;
           }
 
           .project-info {
@@ -63,34 +55,33 @@ const ProjectList = ({ data }) => {
             padding-left: 1rem;
           }
 
-        .card.horizontal {
-          background: var(--card-color)
+        .project-desc {
+          margin-top: 1em;
         }
 
         h4 {
           color: #82adc9;
         }
 
-        .card-content {
+        .descriptions {
+          display: flex;
+          align-items: center;
+        }
+
+        .descriptions span {
           color: var(--card-description-color);
+          margin-left: 1em;
         }
 
-        span.badge {
-          color: var(--card-description-color);
-        }
-
-        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
-          color: var(--font-color);
-        }
-
-        .card .card-action a {
+        .repository-link {
           color: var(--font-color);
           transition: color 0.1s ease;
         }
 
-        .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+        .repository-link:hover {
           color: #82adc9;
         }
+
       `}
       </style>
     </>

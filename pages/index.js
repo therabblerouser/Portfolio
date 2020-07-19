@@ -63,19 +63,6 @@ const Index = () => {
         <Footer />
       </main>
 
-<<<<<<< HEAD
-      <style jsx>{`
-        main {
-          height: 100vh;
-        }
-
-        .home-page-main {
-          margin-top: 55px;
-        }
-      `}</style>
-
-=======
->>>>>>> scrollspy
       <style jsx global>{`
         html,
         body {
