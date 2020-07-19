@@ -26,18 +26,19 @@ const ProjectList = ({ data }) => {
       <div id="projects" className="project scrollspy">
         <div className="container">
           <h2>Projects</h2>
-          <div className="project-img-email">{listProjects}</div>
+          <div className="project-img">{listProjects}</div>
         </div>
       </div>
       <style>
         {`
-
-         // ***** project Section *****
-
          .project {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: var(--font-color);
             padding-top: 1.5em;
-            height: 110vh;
+            padding-bottom: 1.5em;
+            height: 105vh;
           }
 
           .project h2 {
@@ -46,7 +47,7 @@ const ProjectList = ({ data }) => {
             color: var(--font-color);
           }
 
-          .project-img-email {
+          .project-img {
             display: flex;
             flex-direction: column;
             padding-bottom: 2rem;
@@ -72,17 +73,6 @@ const ProjectList = ({ data }) => {
 
         span.badge {
           color: var(--card-description-color);
-        }
-
-        //  ***** Media Queries Keyframes *****
-
-        @media (max-width: 1024px) {
-          
-         .project {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
         }
       `}
       </style>

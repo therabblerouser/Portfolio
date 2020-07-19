@@ -10,8 +10,8 @@ const Navbar = ({ darkMode, toggleMode }) => {
               joemccann.dev
             </a>
             <div className="section-navs">
-              <a href="/projects">Projects</a>
-              <a href="#">About</a>
+              <a href="#projects">Projects</a>
+              <a href="#about">About</a>
               <button onClick={toggleMode}>
                 {/* {!darkMode ? <Brightness3 /> : <WbSunny />} */}
                 <i className="material-icons">
@@ -24,6 +24,8 @@ const Navbar = ({ darkMode, toggleMode }) => {
       </nav>
 
       <style jsx>{`
+        //  ******* NAVBAR *******
+
         nav {
           background-color: var(--bg-color);
           box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);

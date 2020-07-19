@@ -8,13 +8,6 @@ import About from './homeSections/About';
 import ProjectList from './homeSections/ProjectList';
 
 const Home = () => {
-  useEffect(() => {
-    document.addEventListener('DOMContentLoaded', function () {
-      var elems = document.querySelectorAll('.scrollspy');
-      var instances = M.ScrollSpy.init(elems, options);
-    });
-  }, []);
-
   const fetcher = async (url) => {
     let res = await axios.get(url);
     let { data } = res.data;
