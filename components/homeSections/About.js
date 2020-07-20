@@ -121,7 +121,6 @@ const About = () => (
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             height: 100vh;
           }
         }
@@ -136,6 +135,10 @@ const About = () => (
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
+          }
+
+          .container {
+            margin-bottom: 7em;
           }
 
           .img-par img {

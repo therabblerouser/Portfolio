@@ -14,10 +14,7 @@ const Home = () => {
     return data;
   };
 
-  const { data, error } = useSWR(
-    'https://portfolio-sigma-sooty.vercel.app/api/projects',
-    fetcher
-  );
+  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
 
   if (error) return;
   if (!data) return <div>loading...</div>;

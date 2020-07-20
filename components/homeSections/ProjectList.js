@@ -84,6 +84,12 @@ const ProjectList = ({ data }) => {
           color: #82adc9;
         }
 
+        @media (max-width: 812px) {
+          .container {
+            margin-bottom: 8em;
+          }
+        }
+
       `}
       </style>
     </>
