@@ -54,7 +54,6 @@ const Navbar = ({ darkMode, toggleMode }) => {
           align-items: center;
           justify-content: space-between;
           padding-top: 0.5em;
-
           font-weight: 300;
         }
 

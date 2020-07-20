@@ -15,7 +15,7 @@ module.exports = {
 
       base('Table 1')
         .select({
-          maxRecords: 3,
+          maxRecords: 5,
           view: 'Grid view',
         })
         .eachPage(
@@ -28,6 +28,7 @@ module.exports = {
                 description: record.get('description'),
                 tools: record.get('tools'),
                 repository: record.get('repository'),
+                site: record.get('site'),
               };
 
               // Push post to

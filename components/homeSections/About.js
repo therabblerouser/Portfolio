@@ -40,8 +40,6 @@ const About = () => (
 
     <style jsx>
       {`
-        //  ******* ABOUT *******
-
         .about-me {
           display: flex;
           justify-content: center;
@@ -127,25 +125,33 @@ const About = () => (
           }
         }
 
-        @media (max-width: 875px) {
+        @media (max-width: 812px) {
           .about-me {
             height: 100vh;
           }
 
           .img-par {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
           }
 
           .img-par img {
-            height: 17em;
-            width: 21em;
+            height: 13em;
+            width: 13em;
           }
 
           .img-par p {
-            margin-left: 0.5em;
             font-size: 15px;
+            margin-left: 0;
             line-height: 1.3;
+          }
+
+          .contact-me h4 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 0;
           }
         }
       `}

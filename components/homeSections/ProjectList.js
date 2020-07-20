@@ -3,9 +3,9 @@ import { GitHub } from '@material-ui/icons';
 
 const ProjectList = ({ data }) => {
   const listProjects = data.map(
-    ({ id, title, repository, description, tools }) => (
+    ({ id, title, repository, description, tools, site }) => (
       <div key={id} className="project-desc">
-        <a href={repository}>
+        <a href={site}>
           <h4>{title}</h4>
         </a>
         <div className="descriptions">
