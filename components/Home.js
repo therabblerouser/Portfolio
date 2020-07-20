@@ -32,12 +32,6 @@ const Home = () => {
           .home-page-main {
             margin-top: 55px;
           }
-
-          @media (max-width: 812px) {
-            .home-page-main {
-              margin-top: 50px;
-            }
-          }
         `}
       </style>
     </>

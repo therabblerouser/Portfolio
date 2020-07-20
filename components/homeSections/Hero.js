@@ -104,6 +104,10 @@ const Hero = () => (
             height: calc((9px * 100) - 55px);
           }
 
+          .container {
+            margin-bottom: 13em;
+          }
+
           .hero-text {
             padding-left: 3rem;
           }

@@ -46,7 +46,8 @@ const About = () => (
           align-items: center;
           color: var(--font-color);
           background: var(--projects-color);
-          height: 105vh;
+          height: 100vh;
+          padding-top: 0;
         }
 
         .about-me h2 {
@@ -120,7 +121,7 @@ const About = () => (
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 3em;
+
             height: 100vh;
           }
         }
