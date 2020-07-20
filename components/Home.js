@@ -33,7 +33,7 @@ const Home = () => {
       <style jsx>
         {`
           .home-page-main {
-            margin-top: 55px;
+            margin-top: 40px;
           }
         `}
       </style>
