@@ -14,10 +14,7 @@ const Home = () => {
     return data;
   };
 
-  const { data, error } = useSWR(
-    'https://portfolio-sigma-sooty.vercel.app/api/projects',
-    fetcher
-  );
+  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
 
   if (error) return;
   if (!data) return <div>loading...</div>;
@@ -34,6 +31,12 @@ const Home = () => {
         {`
           .home-page-main {
             margin-top: 55px;
+          }
+
+          @media (max-width: 812px) {
+            .home-page-main {
+              margin-top: 50px;
+            }
           }
         `}
       </style>
