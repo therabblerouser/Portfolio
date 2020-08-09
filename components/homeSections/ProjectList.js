@@ -86,7 +86,7 @@ const ProjectList = ({ data }) => {
 
         @media (max-width: 812px) {
           .container {
-            margin-bottom: 8em;
+            margin-bottom: 7em;
           }
         }
 
