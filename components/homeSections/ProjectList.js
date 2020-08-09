@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GitHub } from '@material-ui/icons';
 
-const ProjectList = ({ data }) => {
+import axios from 'axios';
+import useSWR from 'swr';
+
+const ProjectList = () => {
+  const fetcher = async (url) => {
+    let res = await axios.get(url);
+    let { data } = res.data;
+    return data;
+  };
+
+  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
+  // https://portfolio-sigma-sooty.vercel.app/api/projects
+
   const listProjects = data.map(
     ({ id, title, repository, description, tools, site }) => (
       <div key={id} className="project-desc">
@@ -18,6 +30,9 @@ const ProjectList = ({ data }) => {
       </div>
     )
   );
+
+  if (error) return;
+  if (!data) return <div>loading...</div>;
 
   return (
     <>
