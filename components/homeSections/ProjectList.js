@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GitHub } from '@material-ui/icons';
 
 import axios from 'axios';
 import useSWR from 'swr';
 
 const ProjectList = () => {
-  const fetcher = async (url) => {
-    let res = await axios.get(url);
-    let { data } = res.data;
-    return data;
-  };
+  const fetcher = (url) => axios.get(url).then((res) => res.data);
 
-  const { data, error } = useSWR('http://localhost:3000/api/projects', fetcher);
-  // https://portfolio-sigma-sooty.vercel.app/api/projects
+  console.log(fetcher);
+
+  const { data, error } = useSWR(
+    `${process.env.API_BASE_URL}/api/projects`,
+    fetcher
+  );
 
   const listProjects = data.map(
     ({ id, title, repository, description, tools, site }) => (
