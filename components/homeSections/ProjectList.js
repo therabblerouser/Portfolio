@@ -1,19 +1,7 @@
 import React from 'react';
 import { GitHub } from '@material-ui/icons';
 
-import axios from 'axios';
-import useSWR from 'swr';
-
-const ProjectList = () => {
-  const fetcher = (url) => axios.get(url).then((res) => res.data);
-
-  console.log(fetcher);
-
-  const { data, error } = useSWR(
-    `${process.env.API_BASE_URL}/api/projects`,
-    fetcher
-  );
-
+const ProjectList = ({ data }) => {
   const listProjects = data.map(
     ({ id, title, repository, description, tools, site }) => (
       <div key={id} className="project-desc">
@@ -30,9 +18,6 @@ const ProjectList = () => {
       </div>
     )
   );
-
-  if (error) return;
-  if (!data) return <div>loading...</div>;
 
   return (
     <>
