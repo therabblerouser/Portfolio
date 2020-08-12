@@ -1,30 +1,18 @@
 import React from 'react';
 
+import axios from 'axios';
+import useSWR from 'swr';
+
 import Hero from './homeSections/Hero';
 import About from './homeSections/About';
 import ProjectList from './homeSections/ProjectList';
 
-import axios from 'axios';
-import useSWR from 'swr';
-
 const Home = () => {
-  const fetcher = (url) => axios.get(url).then((res) => res.data);
-
-  const { data, error } = useSWR(
-    `${process.env.API_BASE_URL}/api/projects`,
-    fetcher
-  );
-
-  console.log(data);
-
-  if (error) return <div>faild to load</div>;
-  if (!data) return <div>loading...</div>;
-
   return (
     <>
       <div className="home-page-main">
         <Hero />
-        <ProjectList data={data} />
+        <ProjectList />
         <About />
       </div>
 

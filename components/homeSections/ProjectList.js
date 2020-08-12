@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GitHub } from '@material-ui/icons';
 
-const ProjectList = ({ data }) => {
+import axios from 'axios';
+import useSWR from 'swr';
+
+const ProjectList = () => {
+  const [apiData, setApiData] = useState();
+
+  const fetcher = async (url) => {
+    let res = await axios.get(url);
+    let { data } = res.data;
+    setApiData(data);
+  };
+
+  console.log(apiData);
+
+  const { data, error } = useSWR(
+    `${process.env.API_BASE_URL}/api/projects`,
+    fetcher
+  );
+
   const listProjects = data.map(
     ({ id, title, repository, description, tools, site }) => (
       <div key={id} className="project-desc">
@@ -18,6 +36,9 @@ const ProjectList = ({ data }) => {
       </div>
     )
   );
+
+  if (error) return;
+  if (!data) return <div>loading...</div>;
 
   return (
     <>
@@ -95,5 +116,11 @@ const ProjectList = ({ data }) => {
     </>
   );
 };
+
+export async function getStaticProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  };
+}
 
 export default ProjectList;
