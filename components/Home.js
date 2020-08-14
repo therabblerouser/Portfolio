@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Hero from './homeSections/Hero';
-import About from './homeSections/About';
-import ProjectList from './homeSections/ProjectList';
+import Hero from './homeComponents/Hero';
+import About from './homeComponents/About';
+import ProjectList from './homeComponents/ProjectList';
 
 import axios from 'axios';
 import useSWR from 'swr';
